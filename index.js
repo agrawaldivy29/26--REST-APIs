@@ -57,7 +57,7 @@ app.post("/put-secret", async (req, res) => {
       },
       configToken
     );
-    res.render("index.js", { content: JSON.stringify(response.data) });
+    res.render("index.ejs", { content: JSON.stringify(response.data) });
   } catch (err) {
     res.render("index.ejs", { content: JSON.stringify(err.response.data) });
   }
